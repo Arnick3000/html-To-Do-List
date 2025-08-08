@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/wp10474198.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  z-index: -1;
+}
+.container {
+  margin: 120px auto;
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 25px;
+  background-color: rgb(127, 179, 162, 0.4);
+
+  box-shadow: 0 0 40px rgb(0, 0, 0, 0.5);
+}
+
+.head-TDlist {
+  margin-bottom: 10px;
+  color: rgb(0, 86, 0);
+  font-weight: 900;
+  font-size: 32px;
+}
+.search-info {
+  padding: 10px;
+  padding-right: 30px;
+}
+
+.search-bar {
+  width: 350px;
+  height: 35px;
+  padding: 5px;
+  font-weight: bold;
+  border: 2px solid rgba(0, 81, 6, 1);
+  border-radius: 2px;
+  font-size: 12px;
+  outline: none;
+  background-color: rgb(127, 179, 162, 0.4);
+  color: darkgreen;
+}
+.search-bar::placeholder {
+  color: rgb(141, 233, 3);
+}
+.search-bar::selection {
+  background-color: greenyellow;
+  color: black;
+}
+.list-bold {
+  position: relative;
+  padding: 15px;
+}
+.list-h3 {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  color: rgb(0, 86, 0);
+  font-weight: 900;
+  font-size: 24px;
+}
+.list-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 5px 0;
+  margin-top: 20px;
+}
+.border-list-option {
+  direction: ltr;
+  display: grid;
+  grid-template-columns: 1fr  70px;
+  align-items: center;
+  gap: 210px 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.option {
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-cs {
+  cursor: pointer;
+  transition:background-color 0.5s ease-in ;
+  border-radius: 10px;
+padding: 4px;
+}
+.date-cs:hover{
+  background-color: greenyellow;
+  border-radius: 10px;
+}
+.delete-button {
+  
+  width: 60px;
+  padding: 6px;
+  box-shadow: 2px 5px 10px rgb(0, 0, 0, 0.7);
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(155, 155, 49);
+  color: rgb(37, 62, 75);
+  font-weight: bold;
+  transition: transform 0.6s, background-color 1s, color 1s;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.delete-button .tooltip-delete {
+  width: 90px;
+  clip-path: polygon(
+    40% 0%,
+    40% 20%,
+    100% 20%,
+    100% 80%,
+    40% 80%,
+    40% 100%,
+    0% 50%
+  );
+  background-color: rgb(128, 128, 128, 1);
+  color: rgb(130, 1, 1, 0.7);
+  font-weight: 900;
+  font-size: 12px;
+  height: 40px;
+  position: absolute;
+  top: -10px;
+  left: 100px;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-left: 10px;
+  pointer-events: none;
+  opacity: 0;
+}
+.delete-button:hover .tooltip-delete {
+  opacity: 1;
+  transition: opacity 2.5s;
+}
+.delete-button:hover {
+  background-color: rgb(37, 62, 75);
+  color: rgb(155, 155, 49);
+  transform: rotatey(360deg);
+}
+.delete-button:active{
+  opacity: 0.8;
+}
+.addlist {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns:60px 175px 175px 60px ;
+  justify-content: center;
+}
+.add-bar {
+  height: 30px;
+  width: 178px;
+  border: 2px solid rgba(0, 0, 255, 0.9);
+  color: blue;
+  border-radius: 2px;
+  outline: none;
+  padding-left: 5px;
+}
+.add-bar:hover {
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+}
+
+.add-bar::selection {
+  background-color: blue;
+  color: white;
+}
+
+.add-date {
+  height: 30px;
+  width: 178px;
+  border: 2px solid rgba(0, 0, 255, 0.9);
+  color: blue;
+  border-radius: 2px;
+  outline: none;
+  padding-left: 5px;
+}
+.add-date:hover {
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+}
+
+.add-date::selection {
+  background-color: blue;
+  color: white;
+}
+
+
+.add-button {
+  width: 62px;
+  background-color: white;
+  border: 2px solid blue;
+  color: darkblue;
+  font-weight: bolder;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: font-size 0.2s, background-color 0.1s;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: blue;
+  border-color: darkblue;
+  color: white;
+  font-size: 12px;
+}
